@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (orientation: portrait) {
+    body {
+        background-image: url('./assets/image/backgoround-montanhas-vertical.png');
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        background-image: url('./assets/image/backgoround-montanhas-horizontal.png');
+    }
+}

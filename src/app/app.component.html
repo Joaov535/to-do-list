@@ -1,0 +1,21 @@
+<div class="container borderRadius">
+
+  <h1>{{titleH1}}</h1>
+
+  <div class="input">
+    <input type="text" id="entrada"[class]="{borderRadius: true}" #inputValue (keyup)="tarefa = inputValue.value" (keyup.enter)="tarefa !== '' && addTarefa(); inputValue.value=''; tarefa=''">
+
+    <button (click)="tarefa !== '' && addTarefa(); inputValue.value=''; tarefa=''">Adicionar</button>
+  </div>
+
+  <div [class]="{divTask: true, borderRadius: true}">
+    <ul>
+      <li *ngFor="let i of arrTarefas" [id]="i.id" style="list-style-type: none">
+          <div  [class]="{divLi: true, borderRadius: true}">
+            {{i.tarefa}}
+          <button (click)="rmTarefa($event.target)">x</button>
+        </div>
+        </li>
+    </ul>
+  </div>
+</div>
