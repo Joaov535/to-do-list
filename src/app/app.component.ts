@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,24 +9,30 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'toDoList';
   titleH1 = 'To Do List'
-  tarefa = '';
-  arrTarefas: any = [];
+  task = '';
+  arrTasks: any = [];
 
-  addTarefa() {
-    this.arrTarefas.push({ tarefa: this.tarefa, id: Date.now() });
-    // console.log(this.arrTarefas);
+
+  addTask() {
+    this.arrTasks.push({ task: this.task, id: Date.now() });
+    // console.log(this.arrTasks);
   }
 
-  rmTarefa(item: any) {
+  rmTask(item: any) {
     const liClose = item.closest('li');
     const idLi = Number(liClose.id);
-    const index = this.arrTarefas.findIndex((elemento: any) => elemento.id === idLi);
+    const index = this.arrTasks.findIndex((elemento: any) => elemento.id === idLi);
     if (index !== -1) {
-      const removido = this.arrTarefas.splice(index, 1);
+      const removed = this.arrTasks.splice(index, 1);
     };
   }
-}
 
-// console.log(index);
-// console.log({tarefa: liText[1], id: Number(idLi)});
-// console.log(this.arrTarefas);
+  clearTasks() {
+    this.arrTasks = [];
+  }
+
+  currentDate() {
+
+  }
+  
+}

@@ -3,19 +3,25 @@
   <h1>{{titleH1}}</h1>
 
   <div class="input">
-    <input type="text" id="entrada"[class]="{borderRadius: true}" #inputValue (keyup)="tarefa = inputValue.value" (keyup.enter)="tarefa !== '' && addTarefa(); inputValue.value=''; tarefa=''">
-
-    <button (click)="tarefa !== '' && addTarefa(); inputValue.value=''; tarefa=''">Adicionar</button>
+    <input type="text" id="entrada" [class]="{borderRadius: true}" #inputValue (keyup)="task = inputValue.value"
+      (keyup.enter)="task !== '' && addTask(); inputValue.value=''; task=''">
+  </div>
+  <div>
+    <button id="btnClear" class="btnInput borderRadius" (click)="clearTasks(); inputValue.value=''">Clear</button>
+    <button id="btnPush" class="btnInput borderRadius"
+      (click)="task !== '' && addTask(); inputValue.value=''; task=''">Push</button>
   </div>
 
   <div [class]="{divTask: true, borderRadius: true}">
     <ul>
-      <li *ngFor="let i of arrTarefas" [id]="i.id" style="list-style-type: none">
-          <div  [class]="{divLi: true, borderRadius: true}">
-            {{i.tarefa}}
-          <button (click)="rmTarefa($event.target)">x</button>
+      <li *ngFor="let i of arrTasks" [id]="i.id" style="list-style-type: none">
+        <div class="divLi borderRadius">
+          <div id="divTaskTxt">
+            {{i.task}}
+          </div>
+          <button (click)="rmTask($event.target)" id="btnX">X</button>
         </div>
-        </li>
+      </li>
     </ul>
   </div>
 </div>

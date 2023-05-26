@@ -4,33 +4,96 @@
 }
 
 .container {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
-    height: 400px;
+    height: 450px;
     width: fit-content;
-    background-color: rgba(0, 0, 0, 0.2);;
+    min-width: 300px;
+    background-color: #f0ffff86;
     padding: 20px;
+    box-shadow: #dcdcdc37 1px 1px 10px;
+    color: 	#00008B;
+}
+
+.input {
+    position: relative;
     margin: auto;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    border: none;
+}
+
+/* input:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}  */
+
+#entrada {
+    width: 100%;
+    height: 30px;
+    background-color: #f0f8ff99;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+/* 
+#buttons {
+    background-color: aqua;
+    width: 100%;
+} */
+
+.btnInput {
+    width: 38%;
+    height: 30px;
+    border: none;
+    margin: 2px;
+}
+
+#btnClear {
+    background-color: #FF6347;
+}
+
+#btnPush {
+    background-color: #90EE90;
 }
 
 .borderRadius {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .divTask {
-    background-color: rgba(0, 0, 0, 0.1);
-   max-width: 100%;
-   height: 100%;
-   overflow: auto;
+    background-color:#f0f8ff62;
+    max-width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 5px;
+    /* position: relative;
+    margin: auto; */
+}
+
+#divTaskTxt {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .divLi {
-    background-color: #ffff;
+    background-color: #f0f8ffa3;
     padding: 5px;
-    border: solid 2px #DCDCDC;
-
+    border: none;
+    text-align: center;
 }
 
 ul {
@@ -38,10 +101,23 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
+    padding: 10px;
 }
 
-li div{
+li div {
+    position: relative;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: flex-end;
+    /* gap: 10px; */
+    width: 80%;
+}
+
+
+#btnX {
+    color: #da2b0c;
+    background-color: #ffffff00;
+    border: none;
+    width: 15px;
+    border-radius: 5px;
 }
