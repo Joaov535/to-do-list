@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+
 * {
     margin: 0px;
     padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
     position: absolute;
-    top: 42%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -18,7 +22,7 @@
     background-color: #f0ffff86;
     padding: 20px;
     box-shadow: #dcdcdc37 1px 1px 10px;
-    color: 	#00008B;
+    color: #363636;
 }
 
 .input {
@@ -48,11 +52,6 @@
     outline: 0;
 }
 
-/* 
-#buttons {
-    background-color: aqua;
-    width: 100%;
-} */
 
 .btnInput {
     width: 38%;
@@ -79,8 +78,6 @@
     height: 100%;
     overflow: auto;
     margin-top: 5px;
-    /* position: relative;
-    margin: auto; */
 }
 
 #divTaskTxt {
@@ -95,6 +92,11 @@
     border: none;
     text-align: center;
 }
+
+.completed {
+    text-decoration: line-through;
+    color: #4e4e4e75;
+  }
 
 ul {
     display: flex;
@@ -120,4 +122,14 @@ li div {
     border: none;
     width: 15px;
     border-radius: 5px;
+    margin-left: 2px;
+}
+
+#btnOk {
+    color: #228B22;
+    background-color: #ffffff00;
+    border: none;
+    width: 15px;
+    border-radius: 5px;
+    margin-right: 2px;
 }

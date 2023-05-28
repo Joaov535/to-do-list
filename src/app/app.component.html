@@ -12,14 +12,15 @@
       (click)="task !== '' && addTask(); inputValue.value=''; task=''">Push</button>
   </div>
 
-  <div [class]="{divTask: true, borderRadius: true}">
+  <div class="divTask borderRadius">
     <ul>
-      <li *ngFor="let i of arrTasks" [id]="i.id" style="list-style-type: none">
+      <li *ngFor="let i of arrTasks" style="list-style-type: none">
         <div class="divLi borderRadius">
-          <div id="divTaskTxt">
+          <div id="divTaskTxt" [ngClass]="{'completed': i.completed}">
             {{i.task}}
           </div>
-          <button (click)="rmTask($event.target)" id="btnX">X</button>
+          <button (click)="doneTask(i)" id="btnOk">&#10004;</button>
+          <button (click)="rmTask(i)" id="btnX">&#10007;</button>
         </div>
       </li>
     </ul>
